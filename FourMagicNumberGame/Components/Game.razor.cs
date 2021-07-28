@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Components;
 
 namespace FourMagicNumberGame.Components
 {
     public partial class Game
     {
-        [Parameter] public int Min { get; set; }
-
-        [Parameter] public int Max { get; set; }
-
         private int? numberChosen;
 
         private readonly List<string> outputLines = new();
