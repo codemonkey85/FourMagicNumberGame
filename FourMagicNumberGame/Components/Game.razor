@@ -1,0 +1,18 @@
+﻿<h3>Pick a number between @Min and @Max.</h3>
+<label for="numberChooser">Number: </label>
+<input type="number" min="@Min" max="@Max" id="numberChooser" @bind="numberChosen" />
+
+<br />
+
+<button @onclick="DoTheMagic">Do The Magic</button>
+
+@if (outputLines?.Any() ?? false)
+{
+    @foreach (string line in outputLines)
+    {
+        <br />
+        @line
+    } 
+    <br />
+    <label>Four is the magic number.</label>
+}
