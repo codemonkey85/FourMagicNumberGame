@@ -11,7 +11,7 @@ namespace FourMagicNumberGame.Components
 
         private void DoTheMagic()
         {
-            if (numberChosen == null)
+            if ((numberChosen ?? 0) < 0)
             {
                 return;
             }
