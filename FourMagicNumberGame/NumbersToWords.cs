@@ -211,12 +211,12 @@ namespace FourMagicNumberGame
             return cd;
         }
 
-        public static string ConvertToWords(int numb)
+        public static string ConvertToWords(int numb, bool removeSpaces = false)
         {
-            return ConvertToWords(numb.ToString()).Trim();
+            return ConvertToWords(numb.ToString(), removeSpaces).Trim();
         }
 
-        public static string ConvertToWords(string numb)
+        public static string ConvertToWords(string numb, bool removeSpaces = false)
         {
             string val = "", wholeNo = numb, points = "", andStr = "", pointStr = "";
             string endStr = "Only";
@@ -237,7 +237,7 @@ namespace FourMagicNumberGame
                 val = $"{ConvertWholeNumber(wholeNo).Trim()} {andStr}{pointStr}";
             }
             catch { }
-            return val.Replace(" ", string.Empty);
+            return removeSpaces ? val.Replace(" ", string.Empty) : val;
         }
     }
 }

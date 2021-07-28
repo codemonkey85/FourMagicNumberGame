@@ -1,6 +1,10 @@
-﻿<h3>Pick a number between @Min and @Max.</h3>
+﻿<h3>Pick a number.</h3>
 <label for="numberChooser">Number: </label>
-<input type="number" min="@Min" max="@Max" id="numberChooser" @bind="numberChosen" />
+<input type="number" id="numberChooser" min="0" @bind="numberChosen" />
+@if (numberChosen != null)
+{
+    <label class="number-as-words">@NumbersToWords.ConvertToWords(numberChosen ?? 0)</label>
+}
 
 <br />
 
@@ -12,7 +16,7 @@
     {
         <br />
         @line
-    } 
+    }
     <br />
     <label>Four is the magic number.</label>
 }

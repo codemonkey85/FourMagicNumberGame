@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using Microsoft.AspNetCore.Components;
 
 namespace FourMagicNumberGame.Components
@@ -13,7 +12,7 @@ namespace FourMagicNumberGame.Components
 
         private int? numberChosen;
 
-        List<string> outputLines = new();
+        private readonly List<string> outputLines = new();
 
         private void DoTheMagic()
         {
@@ -21,26 +20,27 @@ namespace FourMagicNumberGame.Components
             {
                 return;
             }
+            int currentNumber = numberChosen ?? 0;
             outputLines.Clear();
-            int currentLength = NumbersToWords.ConvertToWords(numberChosen ?? 0).Length;
+            int currentLength = NumbersToWords.ConvertToWords(currentNumber, true).Length;
             Console.WriteLine(currentLength);
             if (currentLength == 4)
             {
-                outputLines.Add($"{numberChosen} is {currentLength}");
-                Console.WriteLine($"{numberChosen} is {currentLength}");
+                outputLines.Add($"{currentNumber} is {currentLength}");
+                Console.WriteLine($"{currentNumber} is {currentLength}");
             }
             else
             {
                 do
                 {
-                    outputLines.Add($"{numberChosen} is {currentLength}");
-                    Console.WriteLine($"{numberChosen} is {currentLength}");
-                    numberChosen = currentLength;
-                    currentLength = NumbersToWords.ConvertToWords(numberChosen ?? 0).Length;
+                    outputLines.Add($"{currentNumber} is {currentLength}");
+                    Console.WriteLine($"{currentNumber} is {currentLength}");
+                    currentNumber = currentLength;
+                    currentLength = NumbersToWords.ConvertToWords(currentNumber, true).Length;
                 }
                 while (currentLength != 4);
-                outputLines.Add($"{numberChosen} is {currentLength}");
-                Console.WriteLine($"{numberChosen} is {currentLength}");
+                outputLines.Add($"{currentNumber} is {currentLength}");
+                Console.WriteLine($"{currentNumber} is {currentLength}");
             }
         }
     }
