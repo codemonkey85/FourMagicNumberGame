@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace FourMagicNumberGame.Components
+﻿namespace FourMagicNumberGame.Components
 {
     public partial class Game
     {

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FourMagicNumberGame
+﻿namespace FourMagicNumberGame
 {
     public static class NumbersToWords
     {
