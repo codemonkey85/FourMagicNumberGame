@@ -1,6 +1,5 @@
-﻿namespace FourMagicNumberGame.Pages
+﻿namespace FourMagicNumberGame.Pages;
+
+public partial class Index
 {
-    public partial class Index
-    {
-    }
 }
