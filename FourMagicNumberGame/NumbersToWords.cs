@@ -40,7 +40,7 @@ public static class NumbersToWords
         70 => "Seventy",
         80 => "Eighty",
         90 => "Ninety",
-        > 0 => $"{Tens($"{number.ToString().Substring(0, 1)}0")} {Ones(number.ToString().Substring(1))}",
+        > 0 => $"{Tens($"{number.ToString()[..1]}0")} {Ones(number.ToString()[1..])}",
         _ => string.Empty
     };
 
@@ -51,7 +51,7 @@ public static class NumbersToWords
         {
             bool beginsZero = false; //tests for 0XX
             bool isDone = false; //test if already translated
-            double dblAmt = (Convert.ToDouble(Number));
+            double dblAmt = Convert.ToDouble(Number);
             //if ((dblAmt > 0) && number.StartsWith("0"))
             if (dblAmt > 0)
             {
@@ -101,23 +101,26 @@ public static class NumbersToWords
                 if (!isDone)
                 {
                     //if transalation is not done, continue...(Recursion comes in now!!)
-                    if (Number.Substring(0, pos) != "0" && Number.Substring(pos) != "0")
+                    if (Number[..pos] != "0" && Number[pos..] != "0")
                     {
                         try
                         {
-                            word = $"{ConvertWholeNumber(Number.Substring(0, pos))}{place}{ConvertWholeNumber(Number.Substring(pos))}";
+                            word = $"{ConvertWholeNumber(Number[..pos])}{place}{ConvertWholeNumber(Number[pos..])}";
                         }
                         catch { }
                     }
                     else
                     {
-                        word = $"{ConvertWholeNumber(Number.Substring(0, pos))}{ConvertWholeNumber(Number.Substring(pos))}";
+                        word = $"{ConvertWholeNumber(Number[..pos])}{ConvertWholeNumber(Number[pos..])}";
                     }
 
                     //check for trailing zeros
                 }
                 //ignore digit grouping names
-                if (word.Trim().Equals(place.Trim())) word = string.Empty;
+                if (word.Trim().Equals(place.Trim()))
+                {
+                    word = string.Empty;
+                }
             }
         }
         catch { }
