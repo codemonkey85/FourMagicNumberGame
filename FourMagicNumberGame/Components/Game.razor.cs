@@ -12,9 +12,9 @@ public partial class Game
         {
             return;
         }
-        int currentNumber = numberChosen ?? 0;
+        var currentNumber = numberChosen ?? 0;
         outputLines.Clear();
-        int currentLength = NumbersToWords.ConvertToWords(currentNumber, true).Length;
+        var currentLength = NumbersToWords.ConvertToWords(currentNumber, true).Length;
         Console.WriteLine(currentLength);
         if (currentLength == 4)
         {

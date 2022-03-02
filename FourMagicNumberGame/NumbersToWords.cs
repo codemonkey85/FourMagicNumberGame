@@ -2,7 +2,7 @@
 
 public static class NumbersToWords
 {
-    private static string Ones(string numberString) => int.TryParse(numberString, out int number) ? Ones(number) : string.Empty;
+    private static string Ones(string numberString) => int.TryParse(numberString, out var number) ? Ones(number) : string.Empty;
 
     private static string Ones(int number) => number switch
     {
@@ -18,7 +18,7 @@ public static class NumbersToWords
         _ => string.Empty,
     };
 
-    private static string Tens(string numberString) => int.TryParse(numberString, out int number) ? Tens(number) : string.Empty;
+    private static string Tens(string numberString) => int.TryParse(numberString, out var number) ? Tens(number) : string.Empty;
 
     private static string Tens(int number) => number switch
     {
@@ -46,21 +46,21 @@ public static class NumbersToWords
 
     private static string ConvertWholeNumber(string Number)
     {
-        string word = string.Empty;
+        var word = string.Empty;
         try
         {
-            bool beginsZero = false; //tests for 0XX
-            bool isDone = false; //test if already translated
-            double dblAmt = Convert.ToDouble(Number);
+            var beginsZero = false; //tests for 0XX
+            var isDone = false; //test if already translated
+            var dblAmt = Convert.ToDouble(Number);
             //if ((dblAmt > 0) && number.StartsWith("0"))
             if (dblAmt > 0)
             {
                 //test for zero or digit zero in a nuemric
                 beginsZero = Number.StartsWith("0");
 
-                int numDigits = Number.Length;
-                int pos = 0; //store digit grouping
-                string place = string.Empty; //digit grouping name:hundres,thousand,etc...
+                var numDigits = Number.Length;
+                var pos = 0; //store digit grouping
+                var place = string.Empty; //digit grouping name:hundres,thousand,etc...
                 switch (numDigits)
                 {
                     case 1: //ones' range
@@ -132,7 +132,7 @@ public static class NumbersToWords
 
     public static string ConvertToWords(string numberString, bool removeSpaces = false)
     {
-        string val = string.Empty;
+        var val = string.Empty;
         try
         {
             val = $"{ConvertWholeNumber(numberString).Trim()}";
