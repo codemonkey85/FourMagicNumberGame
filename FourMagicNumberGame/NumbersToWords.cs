@@ -72,25 +72,25 @@ public static class NumbersToWords
                         isDone = true;
                         break;
                     case 3: //hundreds' range
-                        pos = (numDigits % 3) + 1;
+                        pos = numDigits % 3 + 1;
                         place = " Hundred ";
                         break;
                     case 4: //thousands' range
                     case 5:
                     case 6:
-                        pos = (numDigits % 4) + 1;
+                        pos = numDigits % 4 + 1;
                         place = " Thousand ";
                         break;
                     case 7: //millions' range
                     case 8:
                     case 9:
-                        pos = (numDigits % 7) + 1;
+                        pos = numDigits % 7 + 1;
                         place = " Million ";
                         break;
                     case 10: //Billions's range
                     case 11:
                     case 12:
-                        pos = (numDigits % 10) + 1;
+                        pos = numDigits % 10 + 1;
                         place = " Billion ";
                         break;
                     //add extra case options for anything above Billion...
