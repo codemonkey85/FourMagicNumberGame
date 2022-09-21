@@ -49,58 +49,57 @@ public static class NumbersToWords
         var word = string.Empty;
         try
         {
-            var beginsZero = false; //tests for 0XX
-            var isDone = false; //test if already translated
+            var beginsZero = false; // tests for 0XX
+            var isDone = false; // test if already translated
             var dblAmt = Convert.ToDouble(Number);
-            //if ((dblAmt > 0) && number.StartsWith("0"))
-            if (dblAmt > 0)
+            if (dblAmt > 0D)
             {
-                //test for zero or digit zero in a nuemric
+                // test for zero or digit zero in a numeric
                 beginsZero = Number.StartsWith("0");
 
                 var numDigits = Number.Length;
-                var pos = 0; //store digit grouping
-                var place = string.Empty; //digit grouping name:hundres,thousand,etc...
+                var pos = 0; // store digit grouping
+                var place = string.Empty; // digit grouping name:hundres,thousand,etc...
                 switch (numDigits)
                 {
-                    case 1: //ones' range
+                    case 1: // ones range
                         word = Ones(Number);
                         isDone = true;
                         break;
-                    case 2: //tens' range
+                    case 2: // tens range
                         word = Tens(Number);
                         isDone = true;
                         break;
-                    case 3: //hundreds' range
+                    case 3: // hundreds range
                         pos = numDigits % 3 + 1;
                         place = " Hundred ";
                         break;
-                    case 4: //thousands' range
+                    case 4: // thousands range
                     case 5:
                     case 6:
                         pos = numDigits % 4 + 1;
                         place = " Thousand ";
                         break;
-                    case 7: //millions' range
+                    case 7: // millions range
                     case 8:
                     case 9:
                         pos = numDigits % 7 + 1;
                         place = " Million ";
                         break;
-                    case 10: //Billions's range
+                    case 10: // billionss range
                     case 11:
                     case 12:
                         pos = numDigits % 10 + 1;
                         place = " Billion ";
                         break;
-                    //add extra case options for anything above Billion...
+                    // add extra case options for anything above Billion...
                     default:
                         isDone = true;
                         break;
                 }
                 if (!isDone)
                 {
-                    //if transalation is not done, continue...(Recursion comes in now!!)
+                    // if transalation is not done, continue...(Recursion comes in now!!)
                     if (Number[..pos] != "0" && Number[pos..] != "0")
                     {
                         try
@@ -114,9 +113,9 @@ public static class NumbersToWords
                         word = $"{ConvertWholeNumber(Number[..pos])}{ConvertWholeNumber(Number[pos..])}";
                     }
 
-                    //check for trailing zeros
+                    // check for trailing zeros
                 }
-                //ignore digit grouping names
+                // ignore digit grouping names
                 if (word.Trim().Equals(place.Trim()))
                 {
                     word = string.Empty;

@@ -2,7 +2,7 @@
 
 public partial class Game
 {
-    private int? numberChosen;
+    private int? numberChosen = 0;
 
     private readonly List<string> outputLines = new();
 
@@ -19,20 +19,17 @@ public partial class Game
         if (currentLength == 4)
         {
             outputLines.Add($"{currentNumber} is {currentLength}");
-            Console.WriteLine($"{currentNumber} is {currentLength}");
         }
         else
         {
             do
             {
                 outputLines.Add($"{currentNumber} is {currentLength}");
-                Console.WriteLine($"{currentNumber} is {currentLength}");
                 currentNumber = currentLength;
                 currentLength = NumbersToWords.ConvertToWords(currentNumber, true).Length;
             }
             while (currentLength != 4);
             outputLines.Add($"{currentNumber} is {currentLength}");
-            Console.WriteLine($"{currentNumber} is {currentLength}");
         }
     }
 }
