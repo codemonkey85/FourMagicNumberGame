@@ -2,34 +2,35 @@
 
 public partial class Game
 {
-    private int? numberChosen = 0;
+    private int? _numberChosen = 0;
 
-    private readonly List<string> outputLines = new();
+    private readonly List<string> _outputLines = new();
 
     private void DoTheMagic()
     {
-        if ((numberChosen ?? 0) < 0)
+        if ((_numberChosen ?? 0) < 0)
         {
             return;
         }
-        var currentNumber = numberChosen ?? 0;
-        outputLines.Clear();
+
+        var currentNumber = _numberChosen ?? 0;
+        _outputLines.Clear();
         var currentLength = NumbersToWords.ConvertToWords(currentNumber, true).Length;
         Console.WriteLine(currentLength);
         if (currentLength == 4)
         {
-            outputLines.Add($"{currentNumber} is {currentLength}");
+            _outputLines.Add($"{currentNumber} is {currentLength}");
         }
         else
         {
             do
             {
-                outputLines.Add($"{currentNumber} is {currentLength}");
+                _outputLines.Add($"{currentNumber} is {currentLength}");
                 currentNumber = currentLength;
                 currentLength = NumbersToWords.ConvertToWords(currentNumber, true).Length;
-            }
-            while (currentLength != 4);
-            outputLines.Add($"{currentNumber} is {currentLength}");
+            } while (currentLength != 4);
+
+            _outputLines.Add($"{currentNumber} is {currentLength}");
         }
     }
 }

@@ -44,33 +44,30 @@ public static class NumbersToWords
         _ => string.Empty
     };
 
-    private static string ConvertWholeNumber(string Number)
+    private static string ConvertWholeNumber(string number)
     {
         var word = string.Empty;
         try
         {
-            var beginsZero = false; // tests for 0XX
             var isDone = false; // test if already translated
-            var dblAmt = Convert.ToDouble(Number);
+            var dblAmt = Convert.ToDouble(number);
             if (dblAmt > 0D)
             {
-                // test for zero or digit zero in a numeric
-                beginsZero = Number.StartsWith("0");
-
-                var numDigits = Number.Length;
+                var numDigits = number.Length;
                 var pos = 0; // store digit grouping
                 var place = string.Empty; // digit grouping name:hundres,thousand,etc...
                 switch (numDigits)
                 {
                     case 1: // ones range
-                        word = Ones(Number);
+                        word = Ones(number);
                         isDone = true;
                         break;
                     case 2: // tens range
-                        word = Tens(Number);
+                        word = Tens(number);
                         isDone = true;
                         break;
                     case 3: // hundreds range
+                        // ReSharper disable once UselessBinaryOperation
                         pos = numDigits % 3 + 1;
                         place = " Hundred ";
                         break;
@@ -97,24 +94,29 @@ public static class NumbersToWords
                         isDone = true;
                         break;
                 }
+
                 if (!isDone)
                 {
                     // if transalation is not done, continue...(Recursion comes in now!!)
-                    if (Number[..pos] != "0" && Number[pos..] != "0")
+                    if (number[..pos] != "0" && number[pos..] != "0")
                     {
                         try
                         {
-                            word = $"{ConvertWholeNumber(Number[..pos])}{place}{ConvertWholeNumber(Number[pos..])}";
+                            word = $"{ConvertWholeNumber(number[..pos])}{place}{ConvertWholeNumber(number[pos..])}";
                         }
-                        catch { }
+                        catch
+                        {
+                            // ignored
+                        }
                     }
                     else
                     {
-                        word = $"{ConvertWholeNumber(Number[..pos])}{ConvertWholeNumber(Number[pos..])}";
+                        word = $"{ConvertWholeNumber(number[..pos])}{ConvertWholeNumber(number[pos..])}";
                     }
 
                     // check for trailing zeros
                 }
+
                 // ignore digit grouping names
                 if (word.Trim().Equals(place.Trim()))
                 {
@@ -122,7 +124,11 @@ public static class NumbersToWords
                 }
             }
         }
-        catch { }
+        catch
+        {
+            // ignored
+        }
+
         return word.Trim();
     }
 
@@ -136,7 +142,11 @@ public static class NumbersToWords
         {
             val = $"{ConvertWholeNumber(numberString).Trim()}";
         }
-        catch { }
+        catch
+        {
+            // ignored
+        }
+
         return removeSpaces ? val.Replace(" ", string.Empty) : val;
     }
 }
