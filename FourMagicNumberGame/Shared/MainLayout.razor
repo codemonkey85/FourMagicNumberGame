@@ -1,9 +1,16 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="main">
-        <div class="content px-4">
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar>
+        Four Is The Magic Number!
+    </MudAppBar>
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.False">
             @Body
-        </div>
-    </div>
-</div>
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>

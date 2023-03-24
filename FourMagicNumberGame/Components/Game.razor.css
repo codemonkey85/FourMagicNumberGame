@@ -1,7 +1,0 @@
-﻿.number-as-words {
-    margin: 10px;
-}
-
-input[type=number]::-webkit-inner-spin-button {
-    opacity: 1;
-}
