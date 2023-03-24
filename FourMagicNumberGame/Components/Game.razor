@@ -4,7 +4,7 @@
                  Class="mt-3 align-self-start"
                  Variant="@Variant.Outlined" />
 
-@if (_numberChosen != null)
+@if (_numberChosen is not null)
 {
     <MudText Class="ma-1" Align="Align.Left">
         @NumbersToWords.ConvertToWords(_numberChosen ?? 0)
