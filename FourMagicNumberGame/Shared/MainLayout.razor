@@ -1,12 +1,17 @@
 ﻿@inherits LayoutComponentBase
 
-<MudThemeProvider />
+<MudThemeProvider @ref="@mudThemeProvider"
+                  @bind-IsDarkMode="@isDarkMode" />
 <MudDialogProvider />
 <MudSnackbarProvider />
 
 <MudLayout>
     <MudAppBar>
         Four Is The Magic Number!
+        <MudSpacer />
+        <MudSwitch @bind-Checked="@isDarkMode"
+                   Color="Color.Primary"
+                   Label="@(isDarkMode ? "Dark" : "Light")" />
     </MudAppBar>
     <MudMainContent>
         <MudContainer MaxWidth="MaxWidth.False">
