@@ -2,6 +2,8 @@ namespace FourMagicNumberGame.Shared;
 
 public partial class MainLayout
 {
+    private const string AppTitle = "Four Is The Magic Number!";
+
     private bool isDarkMode;
     private MudThemeProvider? mudThemeProvider;
 
