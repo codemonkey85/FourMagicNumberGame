@@ -29,7 +29,7 @@
       "url": "_framework\/dotnet.runtime.8.0.7.3dp1i72u0p.js"
     },
     {
-      "hash": "sha256-USf1jg49P+b\/iLqdWMZW0eaW9ssfvLQrYDYKnW7Mp\/4=",
+      "hash": "sha256-cG\/dqNreBWf09KwnruiSXMR0+TkBhHAdAEnNnn1O40A=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -41,7 +41,7 @@
       "url": "_framework\/dotnet.native.wasm"
     },
     {
-      "hash": "sha256-KW6Zk+JukLZiTiH9Opq7ulklS3o7ue4CQIzcs4XOupY=",
+      "hash": "sha256-vriyNsPi5ldJsvLjIz3x6Bh6ppM4g+HB1Kux58zJBpk=",
       "url": "_framework\/FourMagicNumberGame.wasm"
     },
     {
@@ -205,5 +205,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "cotE0Tip"
+  "version": "t+GhIfR6"
 };

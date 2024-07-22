@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "FourMagicNumberGame",
   "resources": {
-    "hash": "sha256-riCL4Ys48gNuFSSdtFhM5Vc+3JxS+alN6AmCgFoJYT8=",
+    "hash": "sha256-n9MGmo/e4yr/EzPgH2cFQb1aCd07gg36SIHF24r6JUI=",
     "jsModuleNative": {
       "dotnet.native.8.0.7.oip1pnbpzz.js": "sha256-Apj334i6UzGPayPfawdSwUhpzvZWPbNN309tjS6ftzE="
     },
@@ -12,7 +12,7 @@
       "dotnet.native.wasm": "sha256-Ra0vvL8zss1SdTdhj9eNa0Kk9ldBqEYdMM61u+wsjk8="
     },
     "assembly": {
-      "FourMagicNumberGame.wasm": "sha256-KW6Zk+JukLZiTiH9Opq7ulklS3o7ue4CQIzcs4XOupY=",
+      "FourMagicNumberGame.wasm": "sha256-vriyNsPi5ldJsvLjIz3x6Bh6ppM4g+HB1Kux58zJBpk=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-TH9t55hhPiwEWEKPMgKzN713ohMRR0rxDyxMtjvf7GI=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-AtHYa4e2gmHtgafEQR+EaoJkEl1Fd75y2262kcAxUsU=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-4yej5uTsvsMJLdjRIHFbvakFj1C3LZogTj9CR9GYEeY=",
