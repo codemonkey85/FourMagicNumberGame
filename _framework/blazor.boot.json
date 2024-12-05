@@ -1,9 +1,9 @@
 {
   "mainAssemblyName": "FourMagicNumberGame",
   "resources": {
-    "hash": "sha256-r4rqj+k18BnywvnrCirpm7gfwioL5mw3xNk1uoCVflw=",
+    "hash": "sha256-y6j9odET4+hT8GKtI1VfwxsXE7MK+VpYoey3PI89peI=",
     "fingerprinting": {
-      "FourMagicNumberGame.46jzuz74wg.wasm": "FourMagicNumberGame.wasm",
+      "FourMagicNumberGame.hmxq5k1edu.wasm": "FourMagicNumberGame.wasm",
       "Microsoft.AspNetCore.Components.Forms.aqnxj8lz9n.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
       "Microsoft.AspNetCore.Components.1draxz62hr.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.ukglrb5nq0.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
@@ -62,7 +62,7 @@
       "System.Runtime.InteropServices.JavaScript.x50649m5t2.wasm": "sha256-VS4CSyZJNRAj+SrJqgbXBFWlGMlNDgM4rbwJ6gTH5qg="
     },
     "assembly": {
-      "FourMagicNumberGame.46jzuz74wg.wasm": "sha256-NPqe23DAOWTD5PTXn0DkbPZh/0b3kw73IAU5MK9dWEI=",
+      "FourMagicNumberGame.hmxq5k1edu.wasm": "sha256-R048Zo5ntq6wKlpMK6cBF1w4zhwIFaK/nYhM0NMzoCE=",
       "Microsoft.AspNetCore.Components.Forms.aqnxj8lz9n.wasm": "sha256-nua3TnWYafbhUbvJCzUuKOMACGB4LpfpDkiVv8Xkudc=",
       "Microsoft.AspNetCore.Components.1draxz62hr.wasm": "sha256-BbatiDs10QEFGJC5D2kahPNEk2iT9KOrh/5UY8cjm1k=",
       "Microsoft.AspNetCore.Components.Web.ukglrb5nq0.wasm": "sha256-Ll7VBxLNPAkX8GMhXE+Yzg0rwYjWc4DvVH/S/CCCSRY=",
