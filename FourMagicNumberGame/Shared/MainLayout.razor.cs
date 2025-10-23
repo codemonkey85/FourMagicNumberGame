@@ -9,12 +9,14 @@ public partial class MainLayout
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender && mudThemeProvider is not null)
+        if (!firstRender || mudThemeProvider is null)
         {
-            isDarkMode = await mudThemeProvider.GetSystemPreference();
-            await mudThemeProvider.WatchSystemPreference(OnSystemPreferenceChanged);
-            StateHasChanged();
+            return;
         }
+
+        isDarkMode = await mudThemeProvider.GetSystemDarkModeAsync();
+        await mudThemeProvider.WatchSystemDarkModeAsync(OnSystemPreferenceChanged);
+        StateHasChanged();
     }
 
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
