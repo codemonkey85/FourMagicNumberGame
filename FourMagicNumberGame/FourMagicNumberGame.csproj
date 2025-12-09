@@ -2,12 +2,12 @@
 
 	<PropertyGroup>
 		<TargetFramework>net10.0</TargetFramework>
-		<ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
 		<BlazorWebAssemblyPreserveCollationData>false</BlazorWebAssemblyPreserveCollationData>
 		<InvariantGlobalization>true</InvariantGlobalization>
+		<ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
@@ -23,5 +23,5 @@
 	<ItemGroup>
 		<ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
 	</ItemGroup>
-	
+
 </Project>
