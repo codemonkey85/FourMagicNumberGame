@@ -1,8 +1,8 @@
 self.assetsManifest = {
-  "version": "KzIoZ3mp",
+  "version": "gCxLP32o",
   "assets": [
     {
-      "hash": "sha256-KGcaExjPdLVQUK4LLvcVezhWrWHUpbcKNRc2A3KmGPU=",
+      "hash": "sha256-ZzHmYioOIMEX9F8thiw1Sc+cGGFHLtMWI4q4uvO13CQ=",
       "url": "_content/MudBlazor/MudBlazor.min.css"
     },
     {
@@ -10,8 +10,8 @@ self.assetsManifest = {
       "url": "_content/MudBlazor/MudBlazor.min.js"
     },
     {
-      "hash": "sha256-TEm0/LiR8XyG4XT94d+NeO8CDU9yIQTv+gjiYexzgy8=",
-      "url": "_framework/FourMagicNumberGame.wlmtbdarz2.wasm"
+      "hash": "sha256-AnJr3qpJF/lGfU18EK8DSY4oAoc4yYBDoOGvhezw6yg=",
+      "url": "_framework/FourMagicNumberGame.ygejy0cm0i.wasm"
     },
     {
       "hash": "sha256-kD5zwaHQ83R4Pk2GPA+DPIfPAuOlYHFtQQIaJ49JkO0=",
@@ -82,8 +82,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.owc4gvpwf2.wasm"
     },
     {
-      "hash": "sha256-LqBwTMrctQq6BlB2FbRV4+8LkkGIxw+W8gb/PT+xKHM=",
-      "url": "_framework/MudBlazor.2cep7hoyv6.wasm"
+      "hash": "sha256-2tSy1bQM8kVi09miq/5fuIhxCYVIX7Bk4pa+iqakhYE=",
+      "url": "_framework/MudBlazor.6x3o75pyop.wasm"
     },
     {
       "hash": "sha256-GREtO9+nugwr8kZh7Cric0DF8+z7OMNBlDmz0n8YJWo=",
@@ -182,7 +182,7 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-SYcy+hIHbNgbKQik2+2oOoVQjSV1RybPDcqTU8Ogpi0=",
+      "hash": "sha256-CUug8smoLzNucJ5aFDkNo20XuzcLF3r/vHgG3x9Q0BM=",
       "url": "_framework/dotnet.js"
     },
     {
