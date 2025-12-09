@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "9lweNNWo",
+  "version": "kjViva/h",
   "assets": [
     {
       "hash": "sha256-KGcaExjPdLVQUK4LLvcVezhWrWHUpbcKNRc2A3KmGPU=",
@@ -10,8 +10,8 @@ self.assetsManifest = {
       "url": "_content/MudBlazor/MudBlazor.min.js"
     },
     {
-      "hash": "sha256-0hfVfrWtYg104IJBMBi1SiQmKhcXc0Ir0HE+56km2ig=",
-      "url": "_framework/FourMagicNumberGame.aehn47eqe0.wasm"
+      "hash": "sha256-ZhVxjztNm/HzwPMXFOZmJ13NHGr/RirkoN9st7E6+ew=",
+      "url": "_framework/FourMagicNumberGame.2mk9yu4hjc.wasm"
     },
     {
       "hash": "sha256-kD5zwaHQ83R4Pk2GPA+DPIfPAuOlYHFtQQIaJ49JkO0=",
@@ -182,7 +182,7 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-d712hSnC/frXywAGSMOyOX3TnktdwFZlwhsGEvIZYLM=",
+      "hash": "sha256-6gACRKEK1wLM/HO8EmwOXosiB5Gz7IR7lJw9UkaTVSA=",
       "url": "_framework/dotnet.js"
     },
     {
