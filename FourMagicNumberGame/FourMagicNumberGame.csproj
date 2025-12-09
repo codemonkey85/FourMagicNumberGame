@@ -23,11 +23,5 @@
 	<ItemGroup>
 		<ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
 	</ItemGroup>
-
-	<ItemGroup>
-		<None Remove="Components\" />
-	</ItemGroup>
-	<ItemGroup>
-		<Folder Include="Components\" />
-	</ItemGroup>
+	
 </Project>
